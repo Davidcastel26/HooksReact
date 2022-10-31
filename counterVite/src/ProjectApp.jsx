@@ -1,4 +1,4 @@
-import FirstApp from './FirstApp'
+import { FirstApp } from './FirstApp'
 
 export const App = () => {
     return (
