@@ -1,3 +1,4 @@
+import { CounterApp } from './CounterApp';
 import { FirstApp } from './FirstApp'
 
 export const App = () => {
@@ -6,6 +7,7 @@ export const App = () => {
             {/* <h1>Hola perros</h1> */}
             {/* <FirstApp /> */}
             <FirstApp  subTitle="123"/>
+            <CounterApp value={32}/>
         </div>
     );   
 }
