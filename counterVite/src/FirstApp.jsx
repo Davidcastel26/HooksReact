@@ -6,7 +6,7 @@ import React from 'react'
 // }
 // utilizar variables fijate que no cambian afuera del componente para que no se ester recargando esa info
 
-export const FirstApp = () => {
+export const FirstApp = ({title = 'David'}) => {
   
   // const something = (a , b) => {
   //   return a + b;
@@ -16,7 +16,7 @@ export const FirstApp = () => {
   return (
     <>
       {/* <h1> { something(1,2) } </h1> */}
-      <h2>Dave</h2>
+      <h2>{ title }</h2>
       <p>Soy un subtitulo</p>
     </>
   )
