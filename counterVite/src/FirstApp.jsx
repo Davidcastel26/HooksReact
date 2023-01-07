@@ -14,7 +14,10 @@ export const FirstApp = ({ title, subTitle }) => {
   //   return a + b;
   // }
   //Utilizar variables que son cambiantes dentro el componente
-
+  // if (!title){
+  //   throw new Error("the title does not exist")
+  // }
+  
   return (
     <>
       {/* <h1> { something(1,2) } </h1> */}
@@ -27,5 +30,6 @@ export const FirstApp = ({ title, subTitle }) => {
 
 
 FirstApp.propTypes = {
-  
+  title: PropTypes.string,
+
 }
