@@ -1,18 +1,20 @@
 import React from 'react'
 
-const newMessage = {
-  message: 'Hola mundo',
-  title: 'Fernando'
-}
+// const newMessage = {
+//   message: 'Hola mundo',
+//   title: 'Fernando'
+// }
 
-const something = () => {
-  return 4+4;
-}
 
 export const FirstApp = () => {
+  
+  const something = (a , b) => {
+    return a + b;
+  }
+  
   return (
     <>
-      <h1> { something() } </h1>
+      <h1> { something(1,2) } </h1>
       <p>Soy un subtitulo</p>
     </>
   )
