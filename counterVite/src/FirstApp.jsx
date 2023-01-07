@@ -2,6 +2,9 @@ import React from 'react'
 
 export const FirstApp = () => {
   return (
-    <div>FirstApp</div>
+    <>
+      <h1> Dave </h1>
+      <p>Soy un subtitulo</p>
+    </>
   )
 }
