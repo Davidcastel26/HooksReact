@@ -1,6 +1,6 @@
 
-export function getSaludo(nombre) {
-    return 'Hola ' + nombre;
+export function getSaludo( name )  {
+    return 'Hola ' + name ;
 }
 
-console.log( `Este es un texto: ${ getSaludo( nombre ) }  ` );
+// console.log( `Este es un texto: ${ getSaludo( name ) }  ` );
