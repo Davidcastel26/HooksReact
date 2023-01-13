@@ -39,5 +39,11 @@ describe('testing 08-imp-exp', ()=> {
 
     test('should return Marvels heroes', () => {
 
+        const owner = 'Marvel'
+        const heroess = getHeroesByOwner( owner )
+        console.log(heroess);
+
+        expect(heroess.length).toBe(2)
+        expect( heroess ).toEqual( heroes.filter( (heroe) => heroe.owner === owner))
     })
 })
