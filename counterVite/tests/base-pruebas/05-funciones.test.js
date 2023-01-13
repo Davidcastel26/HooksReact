@@ -1,3 +1,5 @@
+import { getUser } from "../../src/base-pruebas/05-funciones"
+
 
 describe('testing into 05-funciones', () => {
 
@@ -8,5 +10,15 @@ describe('testing into 05-funciones', () => {
             username: 'El_Papi1502'
     }
 
+    const user = getUser();
+    // console.log(user);
+
+    expect( testUser ).toEqual(user)
+
+    })
+
+
+    test('getUsuarioActivo should return an object', () => {
+        
     })
 })
