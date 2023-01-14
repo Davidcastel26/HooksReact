@@ -29,7 +29,7 @@ export const FirstApp = ({
       {/* <h1> { something(1,2) } </h1> */}
       <h2>{ subTitle }</h2>
       {/* <p>Soy un subtitulo</p> */}
-      <p>{ name + 1 }</p>
+      <p>{ name }</p>
     </>
   )
 }
