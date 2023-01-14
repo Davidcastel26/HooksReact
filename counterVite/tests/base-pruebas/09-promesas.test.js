@@ -21,6 +21,10 @@ describe('testing 09-promesas', () => {
 
         const id = 41;
         getHeroeByIdAsync( id )
+            .then( hero => {
+                expect( hero ).toBeFalsy();
+                done()
+            })
             .catch( error => {
 
                 console.log(error);
@@ -29,3 +33,4 @@ describe('testing 09-promesas', () => {
             })
     })
 })
+// done = we will need to use it in order to get the async function since the  jest requested it
