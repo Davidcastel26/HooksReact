@@ -11,4 +11,10 @@ describe('testing 11-async-await', () => {
         expect( typeof url ).toBe( "string" )
 
     })
+
+    test('getImagen should return an error if there is no api key', async()=> {
+
+        const resp = await getImagen();
+        expect( resp ).toBe('No se encontro la imagen')
+    })
 })
