@@ -10,7 +10,8 @@ import PropTypes from 'prop-types';
 
 export const FirstApp = ({
   title,
-  subTitle
+  subTitle,
+  name
   // subTitle = 'the end of the word' 
 }) => {
   
@@ -24,10 +25,11 @@ export const FirstApp = ({
   
   return (
     <>
+      <h1>{title}</h1>
       {/* <h1> { something(1,2) } </h1> */}
-      <h2>{ title }</h2>
+      <h2>{ subTitle }</h2>
       {/* <p>Soy un subtitulo</p> */}
-      <p>{ subTitle + 1 }</p>
+      <p>{ name + 1 }</p>
     </>
   )
 }
