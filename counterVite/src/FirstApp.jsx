@@ -1,19 +1,13 @@
 import React from 'react'
-
+import PropTypes from 'prop-types';
 // const newMessage = {
 //   message: 'Hola mundo',
 //   title: 'Fernando'
 // }
 // utilizar variables fijate que no cambian afuera del componente para que no se ester recargando esa info
 
-import PropTypes from 'prop-types';
-
-export const FirstApp = ({
-  title,
-  subTitle,
-  name
-  // subTitle = 'the end of the word' 
-}) => {
+export const FirstApp = ({ title, subTitle, name }) => {
+// subTitle = 'the end of the word' 
   
   // const something = (a , b) => {
   //   return a + b;
@@ -21,7 +15,7 @@ export const FirstApp = ({
   //Utilizar variables que son cambiantes dentro el componente
   // if (!title){
   //   throw new Error("the title does not exist")
-  // }
+// }
   
   return (
     <>

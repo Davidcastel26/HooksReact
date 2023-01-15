@@ -5,7 +5,8 @@ describe('testing component <FirstApp/>', () => {
     
     test('should be the same as the snapshot', () => {
 
-        render( <FirstApp/>)
+        const title = "Hola soy yo";
+        render(<FirstApp title={title}/>)
     })
 
  })
