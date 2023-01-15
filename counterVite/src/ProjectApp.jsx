@@ -1,11 +1,11 @@
 import { FirstApp } from './FirstApp'
+// import { CounterApp } from './CounterApp';
 
 export const App = () => {
     return (
         <div>
-            {/* <h1>Hola perros</h1> */}
-            {/* <FirstApp /> */}
-            <FirstApp  subTitle="123"/>
+            {/* <CounterApp value={20}/> */}
+            <FirstApp  title="Hola soy yo"/>
         </div>
     );   
 }
