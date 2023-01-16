@@ -37,4 +37,20 @@ describe('we are testing < CounterApp/>', () => {
         expect(screen.getByText('99')).toBeTruthy()
 
       })
+
+    test('should work the rest btn', () => { 
+        
+        render( <CounterApp value={initialValue} /> );
+        
+        fireEvent.click( screen.getByText('+1') );
+        fireEvent.click( screen.getByText('+1') );
+        // fireEvent.click( screen.getByText('Reset') );
+        fireEvent.click(screen.getByRole('button', { name: 'btn-reset'}))
+
+        // screen.debug()
+
+        expect( screen.getByText( initialValue ) ).toBeTruthy()
+
+
+    })
  })
