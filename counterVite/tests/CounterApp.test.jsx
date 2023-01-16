@@ -1,4 +1,4 @@
-import { render, screen } from "@testing-library/react";
+import { fireEvent, render, screen } from "@testing-library/react";
 import { CounterApp } from "../src/CounterApp";
 
 describe('we are testing < CounterApp/>', () => { 
@@ -20,4 +20,21 @@ describe('we are testing < CounterApp/>', () => {
 
      })
 
+    test('should incress with the btn +1', () => { 
+        
+        render( <CounterApp value={ initialValue } /> )
+        //emulate the clikc fireEvent
+        fireEvent.click( screen.getByText('+1'))
+
+        expect( screen.getByText('101')).toBeTruthy()
+     })
+
+     test('should decress with the btn -1', () => { 
+        
+        render( <CounterApp value={ initialValue } /> )
+        fireEvent.click( screen.getByText('-1'))
+
+        expect(screen.getByText('99')).toBeTruthy()
+
+      })
  })
