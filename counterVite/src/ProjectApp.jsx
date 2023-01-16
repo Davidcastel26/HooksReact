@@ -5,7 +5,7 @@ export const App = () => {
     return (
         <div>
             {/* <CounterApp value={20}/> */}
-            <FirstApp title="Hola soy yo"/>
+            <FirstApp title='Hola, Soy Goku' />
         </div>
     );   
 }
