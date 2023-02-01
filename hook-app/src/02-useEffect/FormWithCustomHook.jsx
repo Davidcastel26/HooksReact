@@ -6,7 +6,7 @@ const infoForm = {
     email: 'david@google.com'
 }
 
-export default function SimpleForm() {
+export const FomrWithCustomHook = () => {
 
     const [formState, setFormState] = useState(infoForm)
 
@@ -32,7 +32,7 @@ export default function SimpleForm() {
 
   return (
     <>
-        <h1> SimpleForm </h1>
+        <h1> Formulario con Custom Hook </h1>
         <hr />
 
         <input 
