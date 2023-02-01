@@ -23,11 +23,11 @@ export default function SimpleForm() {
     },[])
 
     useEffect( () => {
-        console.log('fomrState changed!!');
+        // console.log('fomrState changed!!');
     },[formState])
     
     useEffect( () => {
-        console.log('email changed!!');
+        // console.log('email changed!!');
     },[ email ])
 
   return (
@@ -52,7 +52,9 @@ export default function SimpleForm() {
             onChange={ onInputChange }
         />
 
-        <Messege />
+        {
+            (username === 'strider2') && <Messege />
+        }
     </>
   )
 }
