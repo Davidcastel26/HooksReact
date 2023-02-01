@@ -1,16 +1,16 @@
 import { useEffect, useState } from "react"
-import Messege from "./Messege";
 
 const infoForm = {
-    username: 'strider',
-    email: 'david@google.com'
+    username: '',
+    email: '',
+    password: ''
 }
 
 export const FomrWithCustomHook = () => {
 
     const [formState, setFormState] = useState(infoForm)
 
-    const { username, email } = formState;
+    const { username, email, password } = formState;
 
     const onInputChange = ( {target} ) => {
         // console.log(event.target.name);
@@ -44,17 +44,22 @@ export const FomrWithCustomHook = () => {
             onChange={ onInputChange }
         />
         <input 
-            type="text"
+            type="email"
             className="form-control mt-2"
             placeholder="david@google.com"
             name="email"
             value={ email }
             onChange={ onInputChange }
         />
+        <input 
+            type="password"
+            className="form-control mt-2"
+            placeholder="Password"
+            name="password"
+            value={ password }
+            onChange={ onInputChange }
+        />
 
-        {
-            (username === 'strider2') && <Messege />
-        }
     </>
   )
 }
