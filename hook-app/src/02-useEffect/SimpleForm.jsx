@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+import Messege from "./Messege";
 
 const infoForm = {
     username: 'strider',
@@ -50,6 +51,8 @@ export default function SimpleForm() {
             value={ email }
             onChange={ onInputChange }
         />
+
+        <Messege />
     </>
   )
 }
