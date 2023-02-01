@@ -10,9 +10,10 @@ export const FomrWithCustomHook = () => {
         password: ''
     }
 
-    const { formState, onInputChange } = useForm(infoForm)
+    // esto es gracias al useForm hooks que hicimos 'en el return lo destructuramos'
+    const { formState, onInputChange, username, password, email } = useForm(infoForm)
 
-    const { username, email, password } = formState;
+    // const { username, email, password } = formState;
 
     useEffect( () => {
         console.log('useEffect!!');
