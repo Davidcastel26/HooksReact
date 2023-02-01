@@ -2,16 +2,16 @@ import { useEffect } from "react"
 import { useForm } from "../hooks/useForm"
 
 
+const infoForm = {
+    username: '',
+    email: '',
+    password: ''
+}
+
 export const FomrWithCustomHook = () => {
 
-    const infoForm = {
-        username: '',
-        email: '',
-        password: ''
-    }
-
     // esto es gracias al useForm hooks que hicimos 'en el return lo destructuramos'
-    const { formState, onInputChange, username, password, email } = useForm(infoForm)
+    const { formState, onInputChange, onResetForm, username, password, email } = useForm(infoForm)
 
     // const { username, email, password } = formState;
 
@@ -57,6 +57,7 @@ export const FomrWithCustomHook = () => {
             onChange={ onInputChange }
         />
 
+        <button onClick={ onResetForm } className="btn btn-primary mt-2"> Clean </button>
     </>
   )
 }
