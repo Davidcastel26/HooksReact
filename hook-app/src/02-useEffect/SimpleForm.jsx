@@ -6,7 +6,7 @@ const infoForm = {
     email: 'david@google.com'
 }
 
-export default function SimpleForm() {
+export const SimpleForm = ()  => {
 
     const [formState, setFormState] = useState(infoForm)
 
