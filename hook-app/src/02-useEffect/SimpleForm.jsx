@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
 const infoForm = {
     username: 'strider',
@@ -17,7 +17,17 @@ export default function SimpleForm() {
         setFormState({...formState, [ name ]: value})
     }
 
+    useEffect( () => {
+        console.log('useEffect!!');
+    },[])
+
+    useEffect( () => {
+        console.log('fomrState changed!!');
+    },[formState])
     
+    useEffect( () => {
+        console.log('email changed!!');
+    },[ email ])
 
   return (
     <>
