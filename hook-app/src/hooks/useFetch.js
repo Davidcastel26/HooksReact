@@ -11,11 +11,16 @@ export const useFetch = ( url ) => {
     const [state, setState] = useState( info )
 
     const getFetch = async() => {
+
+        setState({
+            ...state,
+            isLoading:true,
+        })
         
         const resp = await fetch( url );
         const data = await resp.json()
 
-        console.log(data);
+        // console.log(data);
         setState({
             data,
             isLoading: false,
