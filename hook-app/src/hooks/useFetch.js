@@ -1,8 +1,7 @@
 
-export const useFetch = () => {
-    return(
-        <>
-            <h3></h3>
-        </>
-    )
+export const useFetch = ( url ) => {
+
+
+
+    return{}
 }
