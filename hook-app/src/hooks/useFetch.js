@@ -4,6 +4,7 @@ const info = {
     data: null,
     isLoading: true,
     hasError: null,
+    // character: null,
 }
 
 export const useFetch = ( url ) => {
@@ -19,7 +20,8 @@ export const useFetch = ( url ) => {
         
         const resp = await fetch( url );
         const data = await resp.json()
-
+        
+        // console.log(character);
         // console.log(data);
         setState({
             data,
