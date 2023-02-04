@@ -4,7 +4,9 @@ const info = {
     data: null,
     isLoading: true,
     hasError: null,
-    // character: null,
+    // species: null,
+    // name: null,
+    character: null
 }
 
 export const useFetch = ( url ) => {
@@ -19,27 +21,30 @@ export const useFetch = ( url ) => {
         })
         
         const resp = await fetch( url );
-        const data = await resp.json()
-        
-        // console.log(character);
-        // console.log(data);
-        setState({
-            data,
-            isLoading: false,
-            hasError: null
-        })
+        const json = await resp.json()
+
+       setState({
+        ...state,
+        data: json,
+        isLoading:false,
+       })
     } 
 
     useEffect(() => {
     
-        getFetch()
+        getFetch();
+        // gettingRickApi();
 
     }, [ url ])
     
 
     return{
         data: state.data,
+        // data: 'holi',
         isLoading: state.isLoading,
         hasError: state.hasError,
+        // name: state.name,
+        // species: state.species,
+        // character: state.character,
     };
 }
