@@ -5,7 +5,15 @@ export const FocusScreen = () => {
         <h1>Focus Screen</h1>
         <hr />
 
-        <input type="text" placeholder="Ingrese su number" />
+        <input 
+            type="text" 
+            placeholder="Ingrese su number" 
+            className="form-control" 
+        />
+
+        <button className="btn btn-primary mt-2">
+            Set Focus
+        </button>
     </>
   )
 }
