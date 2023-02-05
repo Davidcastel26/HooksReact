@@ -5,8 +5,8 @@ import { useFetch } from "../hooks/useFetch"
 export const MultipleCustomHooks = () => {
 
   const { counter, increment } = useCounter( 1 )
-  const { data, isLoading, hasError } = useFetch(`https://api.breakingbadquotes.xyz/v1/quotes`)
-  const  { data:dataObj }  = useFetch(`https://rickandmortyapi.com/api/character/${ counter }`)
+  const { data, hasError,isLoading } = useFetch(`https://api.breakingbadquotes.xyz/v1/quotes`)
+  const  { data:dataObj,  }  = useFetch(`https://rickandmortyapi.com/api/character/${ counter }`)
   
   // console.log(name);
   // const {name, character} = gettingRickApi()
@@ -24,7 +24,6 @@ export const MultipleCustomHooks = () => {
   const { author, quote } = !!data && data[0];
 
   const { name, species } = dataObj
-
 
   // console.log(quote);
 //  return null;
@@ -47,8 +46,8 @@ export const MultipleCustomHooks = () => {
                 <p className="mb-1"> { quote } </p>
                 <footer className="blockquote-footer"> { author } </footer>
               </blockquote>
-
-              <blockquote className="blockquote text-end">
+              <hr />
+              <blockquote className="blockquote text-center">
                 <p className="mb-1"> { name } </p>
                 <footer className="blockquote-footer"> { species } </footer>
               </blockquote>
@@ -56,7 +55,7 @@ export const MultipleCustomHooks = () => {
             )
         }
 
-        <button className="btn btn-primary" onClick={ () => increment()}> 
+        <button className="btn btn-primary" disabled={ isLoading } onClick={ () => increment()}> 
           Next Quote
         </button>
 
