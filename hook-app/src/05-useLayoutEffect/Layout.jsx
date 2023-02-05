@@ -10,7 +10,7 @@ export const Layout = () => {
   const  { data:dataObj,  }  = useFetch(`https://rickandmortyapi.com/api/character/${counter}`)
   
   if (isLoading) return <h1>Loading</h1>
-  
+
   const { author, quote } = !!data && data[0];
   const { name, species } = dataObj
 
@@ -28,8 +28,6 @@ export const Layout = () => {
         <button className="btn btn-primary" disabled={ isLoading } onClick={ () => increment()}> 
           Next Quote
         </button>
-
-        
 
     </>
   )
