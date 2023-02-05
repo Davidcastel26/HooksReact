@@ -1,7 +1,5 @@
 import { useCounter, useFetch } from "../hooks";
-import { LoadingQuote } from "./LoadingQuote";
-import { Quote } from "./Quote";
-
+import { LoadingQuote,Quote } from "../03-examples";
 
 export const Layout = () => {
 
