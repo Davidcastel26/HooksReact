@@ -1,4 +1,5 @@
 import { useCallback, useState } from "react"
+import { useEffect } from "react"
 import { ShowIncrement } from "./ShowIncrement"
 
 export const CallbackHook = () => {
@@ -16,6 +17,13 @@ export const CallbackHook = () => {
     // const incrementFather = () => {
     //     setCounter(counter + 1)
     // }
+
+    //si no queremos usar useMemo en ShoIncrment componet
+    // utilizaremos un useEffect
+    // useEffect(() => {
+    //     incrementFather
+    // }, [incrementFather])
+    
 
   return (
     <div>
