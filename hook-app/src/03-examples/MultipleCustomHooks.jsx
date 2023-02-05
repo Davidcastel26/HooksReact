@@ -35,12 +35,8 @@ export const MultipleCustomHooks = () => {
 
         {
           (isLoading)
-            ?(
-              <LoadingQuote isLoading={isLoading} />
-            )
-            :(
-             <Quote data={...data} dataObj={...dataObj} />
-            )
+            ? <LoadingQuote isLoading={isLoading} />
+            : <Quote author={author} quote={quote} name={name} species={species} />
         }
 
         <button className="btn btn-primary" disabled={ isLoading } onClick={ () => increment()}> 
