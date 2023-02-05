@@ -1,9 +1,11 @@
+import { memo } from 'react'
 
-export const Small = ({ value }) => {
+                    // React.memo(( )=> {})
+export const Small = memo(({ value }) => {
 
     console.log('soy yo otra vez :(');
 
   return (
     <small>{ value }</small>
   )
-}
+})
