@@ -4,14 +4,10 @@ import { useFetch } from "../hooks/useFetch"
  
 export const MultipleCustomHooks = () => {
 
+  const { counter, increment } = useCounter( 1 )
   const { data, isLoading, hasError } = useFetch(`https://api.breakingbadquotes.xyz/v1/quotes`)
-
-  const  { data:dataObj }  = useFetch(`https://rickandmortyapi.com/api/character/2`)
-  // console.log(data, "BREAKING BAD");
-  // console.log( dataObj?.name, "RandM" );
-
-  const {} = useCounter()
-
+  const  { data:dataObj }  = useFetch(`https://rickandmortyapi.com/api/character/${ counter }`)
+  
   // console.log(name);
   // const {name, character} = gettingRickApi()
   // console.log({datas});
@@ -21,6 +17,9 @@ export const MultipleCustomHooks = () => {
   // const { name, species } = character;
   // const { name, species } = character;
   // console.log(name);
+  // console.log(data, "BREAKING BAD");
+  // console.log( dataObj?.name, "RandM" );
+  
   if (isLoading) return <h1>Loading</h1>
   const { author, quote } = !!data && data[0];
 
@@ -57,7 +56,7 @@ export const MultipleCustomHooks = () => {
             )
         }
 
-        <button className="btn btn-primary">
+        <button className="btn btn-primary" onClick={ () => increment()}> 
           Next Quote
         </button>
 
