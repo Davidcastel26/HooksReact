@@ -7,16 +7,13 @@ export const Layout = () => {
 
   const { counter, increment } = useCounter( 1 )
   const { data, hasError,isLoading } = useFetch(`https://api.breakingbadquotes.xyz/v1/quotes`)
-  const  { data:dataObj,  }  = useFetch(`https://rickandmortyapi.com/api/character/${ counter }`)
-
+  const  { data:dataObj,  }  = useFetch(`https://rickandmortyapi.com/api/character/${counter}`)
   
   if (isLoading) return <h1>Loading</h1>
+  
   const { author, quote } = !!data && data[0];
-
   const { name, species } = dataObj
 
-  // console.log(quote);
-//  return null;
   return (
     <>
         <h1>Breaking Bad Quotes</h1>  
