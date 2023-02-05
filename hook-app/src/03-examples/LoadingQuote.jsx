@@ -1,5 +1,5 @@
 
-export const LoadingQuote = () => {
+export const LoadingQuote = (author, quote, name, species ) => {
 
     return(
         <div>
