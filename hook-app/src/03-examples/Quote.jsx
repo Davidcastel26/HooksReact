@@ -1,6 +1,6 @@
 
 
-export const Quote = (author, quote, name, species) => {
+export const Quote = ({author, quote, name, species}) => {
   return (
     <div>
 
