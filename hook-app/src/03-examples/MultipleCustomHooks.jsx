@@ -1,6 +1,7 @@
 import { useCounter, useFetch } from "../hooks";
+import { LoadingQuote } from "./LoadingQuote";
 
- 
+
 export const MultipleCustomHooks = () => {
 
   const { counter, increment } = useCounter( 1 )
@@ -39,18 +40,7 @@ export const MultipleCustomHooks = () => {
               </div>
             )
             :(
-              <div>
-
-              <blockquote className="blockquote text-end">
-                <p className="mb-1"> { quote } </p>
-                <footer className="blockquote-footer"> { author } </footer>
-              </blockquote>
-              <hr />
-              <blockquote className="blockquote text-center">
-                <p className="mb-1"> { name } </p>
-                <footer className="blockquote-footer"> { species } </footer>
-              </blockquote>
-              </div>
+             <LoadingQuote data={...data} dataObj={...dataObj} >
             )
         }
 
