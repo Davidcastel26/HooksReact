@@ -4,11 +4,11 @@ import { useFetch } from "../hooks/useFetch"
  
 export const MultipleCustomHooks = () => {
 
-  const { data, isLoading, hasError} = useFetch(`https://api.breakingbadquotes.xyz/v1/quotes`)
+  const { data, isLoading, hasError } = useFetch(`https://api.breakingbadquotes.xyz/v1/quotes`)
 
   const  { data:dataObj }  = useFetch(`https://rickandmortyapi.com/api/character/2`)
   // console.log(data, "BREAKING BAD");
-  console.log( dataObj?.name, "RandM" );
+  // console.log( dataObj?.name, "RandM" );
 
   const {} = useCounter()
 
