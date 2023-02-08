@@ -42,7 +42,8 @@ export const TodoApp = () => {
 
     const handleToggleTodo = (id) => {
         dispatch({
-            type:'[TODO] Toggle Todo'
+            type:'[TODO] Toggle Todo',
+            payload: id
         })
     }
 

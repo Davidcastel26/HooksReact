@@ -33,7 +33,7 @@ export const FormTodo = ({ onNewTodo }) => {
             onChange={ onInputChange }
         />
 
-        <button className="btn btn-outline-secondary mt-2" type="submit">
+        <button className="btn btn-outline-secondary mt-1" type="submit">
             Add
         </button>
 
