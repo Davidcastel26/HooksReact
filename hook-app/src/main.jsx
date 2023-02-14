@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-// import HooksApp from './HooksApp'
+import { BrowserRouter } from 'react-router-dom';
 
 import './index.css'
 // import CounterApp from './01-useState/CounterApp'
@@ -19,7 +19,9 @@ import './index.css'
 import { MainApp } from './09-useContext/MainApp'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  // <React.StrictMode>
+  <BrowserRouter >
+    {/* <React.StrictMode> */}
      <MainApp />
-  //  </React.StrictMode>,
+   {/* </React.StrictMode>, */}
+  </BrowserRouter>
  )
