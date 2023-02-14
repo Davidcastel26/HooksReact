@@ -20,8 +20,8 @@ import { MainApp } from './09-useContext/MainApp'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <BrowserRouter >
-    {/* <React.StrictMode> */}
-     <MainApp />
-   {/* </React.StrictMode>, */}
+      {/* <React.StrictMode> */}
+      <MainApp />
+      {/* </React.StrictMode>, */}
   </BrowserRouter>
  )
