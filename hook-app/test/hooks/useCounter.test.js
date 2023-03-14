@@ -23,22 +23,46 @@ describe('testing into useCounter', () => {
 
     })
     
-    test('should increas ', () => {
+    test('should increas the value', () => {
 
         const { result } = renderHook( () => useCounter())
-        const { counter, increment, decrement, reset } = result.current;
+        const { counter, increment, reset } = result.current;
 
         act(()=>{
             increment();
-            // increment(2)
+            increment(2)
         })
         
 
-        expect( result.current.counter ).toBe(12)
+        expect( result.current.counter ).toBe(13)
 
     })
-    test('should', () => {
+    test('should decrement the value counter', () => {
+        const { result } = renderHook( () => useCounter(10))
+        const { counter, decrement, reset } = result.current;
 
+        act( ()=>{
+            decrement()
+            decrement(2)
+        })
+
+        expect( result.current.counter).toBe(7)
     })
+
+    test('should return reset value', () => { 
+        
+        const { result } = renderHook(() => useCounter(10))
+        const { reset, decrement } = result.current;
+
+        act(() =>{
+            decrement();
+            decrement();
+            decrement();
+            decrement();
+            reset();
+        })
+
+        expect(result.current.counter).toBe(10)
+     })
 
 })
