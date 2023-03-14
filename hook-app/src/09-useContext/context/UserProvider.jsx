@@ -11,9 +11,11 @@ export const UserProvider = ({ children }) => {
 
   const [user, setUser] = useState()
 
+  // const loginUser 
+
   return (
     // <UserContext.Provider value={{ hola:'Mundo', user}}>
-    <UserContext.Provider value={{ user }}>
+    <UserContext.Provider value={{ user, setUser }}>
         { children }
     </UserContext.Provider>
   )
