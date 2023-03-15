@@ -54,7 +54,7 @@ describe('testing into TodoReducer', () => {
 
         const newState = todoReducer( initialState, action)
 
-        expect
+        expect( newState[0].done).toBe( true )
 
       })
     
