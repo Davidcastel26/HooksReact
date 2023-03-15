@@ -11,7 +11,7 @@ export const useForm = ( initialForm = {}) => {
     }
 
     const onResetForm = () => {
-        setFormState( initialForm)
+        setFormState( initialForm ) 
     }
 
     return{
