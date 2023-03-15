@@ -1,3 +1,4 @@
+import { todoReducer } from "../../src/08-useReducer/todoReducer"
 
 describe('testing into TodoReducer', () => { 
 
@@ -9,7 +10,8 @@ describe('testing into TodoReducer', () => {
     
     test('should return initial state', () => { 
         
-
+        const newState = todoReducer( initialState, {} )
+        expect( newState).toBe(initialState)
 
      })
     
