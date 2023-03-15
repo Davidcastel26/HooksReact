@@ -30,7 +30,7 @@ export const MultipleCustomHooks = () => {
 //  return null;
   return (
     <>
-        <h1>Breaking Bad Quotes</h1>  
+        <h1>Quotes</h1>  
         <hr />
 
         {

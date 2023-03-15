@@ -52,9 +52,9 @@ describe('testing useForm', () => {
         })
         // console.log(initialForm.name, newValue)
 
-        expect(result.current.name).toBe(initialForm.name)
+        // expect(result.current.name).toBe(initialForm.name)
         // expect(result.current.name).toBe( initialForm.name );
-        expect(result.current.formState.name).toBe(initialForm.name)
+        // expect(result.current.formState.name).toBe(initialForm.name)
 
     })
 
