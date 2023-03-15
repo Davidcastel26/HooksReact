@@ -14,5 +14,48 @@ describe('testing into TodoReducer', () => {
         expect( newState).toBe(initialState)
 
      })
+
+     test('should add a todo ', () => { 
+        
+        const action ={
+            type: '[TODO] Add Todo',
+            payload:{
+                id:2,
+                description:'Nuevo todo #2',
+                done: false,
+            }
+        }
+
+        const newState = todoReducer( initialState, action)
+        expect( newState.length ).toBe( 2 )
+        //to contain nos ayuda a evarluar que un arreglo tengo un obj
+        expect( newState ).toContain( action.payload )
+
+      })
+
+      test('should delete a To Do', () => {
+
+        const action = {
+            type:'[TODO] Remove Todo',
+            payload: 1
+        }
+
+        const newState = todoReducer( initialState, action)
+        expect(newState.length).toBe(0)
+
+      })
+
+      test('should do the toggle of to do', () => {
+    
+        const action = {
+            type:'[TODO] Toggle Todo',
+            payload: 1
+        }
+
+        const newState = todoReducer( initialState, action)
+
+        expect
+
+      })
     
  })
