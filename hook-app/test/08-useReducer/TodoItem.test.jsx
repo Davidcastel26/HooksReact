@@ -35,4 +35,21 @@ describe('test into <TodoItem>', () => {
 
     })
 
+    test('should show the To do Completed', () => { 
+        
+        todo.done = true;
+
+        render(
+            <TodoItem 
+                todo={todo}
+                onToggleTodo={onToggleTodoMock}
+                onDeleteTodo={onDeleteTodoMock}
+            />
+        )
+
+        const spanElement = screen.getByLabelText('span');
+        expect( spanElement.className ).toContain('text-decoration-line-through')
+
+     })
+
  })
