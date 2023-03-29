@@ -1,4 +1,4 @@
-import { render } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 import { TodoItem } from "../../src/08-useReducer/TodoItem";
 
 describe('test into <TodoItem>', () => { 
@@ -16,7 +16,17 @@ describe('test into <TodoItem>', () => {
 
     test('should show the pendding to do', () => { 
         
-        render( <TodoItem todo={ todo } onToggleTodo={onToggleTodoMock} onDeleteTodo={ onDeleteTodoMock }/>)
+        render( 
+            <TodoItem 
+                todo={ todo } 
+                onToggleTodo={onToggleTodoMock} 
+                onDeleteTodo={ onDeleteTodoMock }
+            />
+        );
+
+        const liElement = screen.getByRole('listitem')
+
+        expect( liElement.className ).toBe('list-group-item d-flex justify-content-between')
 
     })
 
