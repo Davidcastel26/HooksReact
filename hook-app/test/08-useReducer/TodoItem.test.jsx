@@ -69,6 +69,21 @@ describe('test into <TodoItem>', () => {
 
     })
 
-    
+    test('span should call delete to do', () => { 
+        
+        render(
+            <TodoItem 
+                todo={todo}
+                onToggleTodo={onToggleTodoMock}
+                onDeleteTodo={onDeleteTodoMock}
+            />
+        )
+
+        const deleteButton = screen.getByRole('button')
+        fireEvent.click( deleteButton )
+
+        expect( onDeleteTodoMock ).toHaveBeenCalledWith( todo.id )
+
+    })
 
  })
