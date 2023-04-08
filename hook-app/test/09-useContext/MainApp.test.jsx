@@ -16,7 +16,7 @@ describe('testing <MainApp />', () => {
 
     })
 
-    test('should show login pag', () => { 
+    test('should show login page', () => { 
 
         render(
             <MemoryRouter initialEntries={['/login']}>
