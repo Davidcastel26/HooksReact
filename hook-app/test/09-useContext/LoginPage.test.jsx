@@ -12,7 +12,9 @@ describe('testing into <LoginPage/>', () => {
             </UserContext.Provider>
         )
 
-        const preTag = screen.getByLabelText('pre')
+        const preTag = screen.getByLabelText('pre');
+        
+        expect( preTag.innerHTML ).toBe('null')
 
     })
 
