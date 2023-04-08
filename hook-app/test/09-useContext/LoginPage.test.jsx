@@ -31,7 +31,7 @@ describe('testing into <LoginPage/>', () => {
         const btn = screen.getByRole('button');
         fireEvent.click(btn)
 
-        expect( setUserMock ).toHaveBeenCalledWith()
+        expect( setUserMock ).toHaveBeenCalledWith({"email": "juan@google.com", "id": 123, "name": "Juan"})
 
     })
  })
